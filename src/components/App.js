@@ -47,10 +47,9 @@ export default function App() {
               <Button
                 id="new-quote"
                 onClick={() => {
-                  const random = Math.floor(
-                    Math.random() * Math.floor(quotes.length)
+                  setRandom(
+                    Math.floor(Math.random() * Math.floor(quotes.length))
                   )
-                  setRandom(random)
                 }}
                 color="black"
                 primary
@@ -72,12 +71,3 @@ export default function App() {
     </Styled>
   )
 }
-
-// resources: https://overreacted.io/a-complete-guide-to-useeffect/  , https://www.robinwieruch.de/react-hooks-fetch-data/
-// learning objective: use the new useEffect hook to fetch data
-//1. fetch quotes from an api
-//2. set those quotes to state
-//3. run a getRandomQuote function that returns a random number between 0 and
-// quotesArr.lenght
-//4. display that quote
-// display a random quote from state on click
